@@ -1,0 +1,52 @@
+---
+interface Props {
+  src: string;
+  title: string;
+}
+
+const { src, title } = Astro.props;
+---
+
+<div class="iframe-wrapper">
+  <iframe 
+    {src}
+    {title}
+    height="800px"
+    width="100%"
+    frameborder="0"
+    allow="microphone; camera"
+  ></iframe>
+</div>
+
+<style>
+  .iframe-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  iframe {
+    display: block;
+    margin: 0 auto;
+    border: none;
+  }
+
+  @media (max-width: 768px) {
+    .iframe-wrapper {
+      max-width: 100%;
+      margin: 1.5rem 0;
+      padding: 0;
+      border-radius: 8px;
+    }
+
+    iframe {
+      height: 600px !important;
+    }
+  }
+</style>
