@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+import IframeWrapper from '../components/IframeWrapper.astro';
+---
+
+<Layout title="BrewMuse - Your AI Barista Companion">
+	<section class="project-header">
+		<div class="container">
+			<h1>☕ BrewMuse</h1>
+			<p class="subtitle">Your AI Barista Companion</p>
+		</div>
+	</section>
+
+	<section class="project-description">
+		<div class="container">
+			<h2>Perfect Your Coffee Craft</h2>
+			<p>
+				BrewMuse is an AI-powered guide designed for home and professional baristas who want to master the art of
+				exceptional coffee. Whether you're dialing in espresso, perfecting pour-over technique, or exploring specialty
+				coffee methods, BrewMuse provides expert guidance tailored to your level.
+			</p>
+
+			<h3>Features</h3>
+			<ul class="features-list">
+				<li>Real-time brewing guidance and technique tips</li>
+				<li>Troubleshooting for common coffee issues</li>
+				<li>Equipment recommendations and maintenance</li>
+				<li>Recipe development for specialty drinks</li>
+				<li>Coffee science explanations</li>
+			</ul>
+		</div>
+	</section>
+
+	<IframeWrapper src="https://brewmuse-10029394.chipp.ai" title="BrewMuse" />
+
+	<section class="cta-section">
+		<div class="container">
+			<h2>Ready to Brew Better?</h2>
+			<p>Interact with BrewMuse above, or explore our other projects.</p>
+			<a href="/projects" class="btn btn-primary">Back to Projects</a>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.project-header {
+		background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
+		padding: 4rem 2rem;
+		text-align: center;
+		border-bottom: 1px solid #e0e0e0;
+	}
+
+	.project-header h1 {
+		font-size: 3.5rem;
+		margin-bottom: 0.5rem;
+		color: #1a1a1a;
+		background: linear-gradient(135deg, #6366f1, #4f46e5);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.subtitle {
+		font-size: 1.5rem;
+		color: #4b5563;
+		font-style: italic;
+	}
+
+	.project-description {
+		padding: 4rem 2rem;
+		background: #fafafa;
+	}
+
+	.container {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.project-description h2 {
+		margin-bottom: 1.5rem;
+	}
+
+	.project-description p {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		color: #4b5563;
+		margin-bottom: 2rem;
+	}
+
+	.project-description h3 {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		color: #1a1a1a;
+	}
+
+	.features-list {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 2rem;
+	}
+
+	.features-list li {
+		padding: 0.75rem 0;
+		padding-left: 2rem;
+		color: #4b5563;
+		position: relative;
+		font-size: 1.05rem;
+	}
+
+	.features-list li:before {
+		content: '✓';
+		position: absolute;
+		left: 0;
+		color: #6366f1;
+		font-weight: bold;
+		font-size: 1.2rem;
+	}
+
+	.cta-section {
+		padding: 3rem 2rem;
+		text-align: center;
+		background: #ffffff;
+		border-top: 1px solid #e0e0e0;
+	}
+
+	.cta-section h2 {
+		margin-bottom: 1rem;
+	}
+
+	.cta-section p {
+		color: #4b5563;
+		margin-bottom: 2rem;
+		font-size: 1.1rem;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 0.75rem 2rem;
+		border-radius: 8px;
+		font-weight: 600;
+		font-size: 1rem;
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+		text-decoration: none;
+	}
+
+	.btn-primary {
+		background: #6366f1;
+		color: white;
+		box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+	}
+
+	.btn-primary:hover {
+		background: #4f46e5;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
+	}
+
+	@media (max-width: 768px) {
+		.project-header {
+			padding: 2rem 1rem;
+		}
+
+		.project-header h1 {
+			font-size: 2.5rem;
+		}
+
+		.subtitle {
+			font-size: 1.2rem;
+		}
+
+		.project-description {
+			padding: 2rem 1rem;
+		}
+
+		.project-description p,
+		.features-list li {
+			font-size: 1rem;
+		}
+	}
+</style>
