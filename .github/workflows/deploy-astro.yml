@@ -96,6 +96,8 @@ jobs:
           with:
             comment-summary-in-pr: always
             warn-only: true
+            base-ref: ${GITHUB_BASE_REF}
+            head-ref: ${GITHUB_HEAD_REF}
           #   deny-licenses: GPL-1.0-or-later, LGPL-2.0-or-later
           #   retry-on-snapshot-warnings: true
           
