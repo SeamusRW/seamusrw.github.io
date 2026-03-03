@@ -2,9 +2,10 @@
 interface Props {
   src: string;
   title: string;
+  allow?: string;
 }
 
-const { src, title } = Astro.props;
+const { src, title, allow = "microphone; camera" } = Astro.props;
 ---
 
 <div class="iframe-wrapper">
@@ -14,7 +15,7 @@ const { src, title } = Astro.props;
     height="800px"
     width="100%"
     frameborder="0"
-    allow="microphone; camera"
+    allow={allow}
   ></iframe>
 </div>
 
