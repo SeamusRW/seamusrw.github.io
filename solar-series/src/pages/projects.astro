@@ -1,5 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import brewmuseLogo from '../assets/BrewMuse.png';
+import coffeePalLogo from '../assets/CoffeePal.png';
+import romanianLogo from '../assets/Romanian Language Tutor.png';
+import tatarBridgeLogo from '../assets/TatarBridge.png';
 ---
 
 <Layout title="Projects - SeamusRW's Tech Playground">
@@ -15,7 +19,7 @@ import Layout from '../layouts/Layout.astro';
 			<div class="projects-grid">
 				<a href="/brewmuse" class="project-card">
 					<div class="project-content">
-						<div class="project-icon">☕</div>
+						<img src={brewmuseLogo.src} alt="BrewMuse" class="project-logo" />
 						<h2>BrewMuse</h2>
 						<p class="project-type">AI Barista Guide</p>
 						<p class="project-description">
@@ -33,7 +37,7 @@ import Layout from '../layouts/Layout.astro';
 
 				<a href="/coffeepal" class="project-card">
 					<div class="project-content">
-						<div class="project-icon">🌍</div>
+						<img src={coffeePalLogo.src} alt="CoffeePal" class="project-logo" />
 						<h2>CoffeePal</h2>
 						<p class="project-type">Coffee Discovery</p>
 						<p class="project-description">
@@ -51,7 +55,7 @@ import Layout from '../layouts/Layout.astro';
 
 				<a href="/romaniantutor" class="project-card">
 					<div class="project-content">
-						<div class="project-icon">🇷🇴</div>
+						<img src={romanianLogo.src} alt="Romanian Language Tutor" class="project-logo" />
 						<h2>Romanian Language Tutor</h2>
 						<p class="project-type">Language Learning</p>
 						<p class="project-description">
@@ -69,7 +73,7 @@ import Layout from '../layouts/Layout.astro';
 
 				<a href="/tatarbridge" class="project-card">
 					<div class="project-content">
-						<div class="project-icon">🌉</div>
+						<img src={tatarBridgeLogo.src} alt="TatarBridge" class="project-logo" />
 						<h2>TatarBridge</h2>
 						<p class="project-type">Language Learning</p>
 						<p class="project-description">
@@ -192,9 +196,11 @@ import Layout from '../layouts/Layout.astro';
 		opacity: 1;
 	}
 
-	.project-icon {
-		font-size: 4rem;
+	.project-logo {
+		max-width: 120px;
+		height: auto;
 		margin-bottom: 1rem;
+		object-fit: contain;
 	}
 
 	.project-card h2 {
