@@ -1,17 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Carousel from '../components/Carousel.astro';
+import brewmuseLogo from '../assets/BrewMuse.png';
+import coffeePalLogo from '../assets/CoffeePal.png';
 
 const projects = [
   {
     title: 'BrewMuse',
-    icon: '☕',
+    image: brewmuseLogo.src,
     description: 'Your AI barista companion. Expert guidance for perfect espresso, pour-overs, and specialty coffee techniques.',
     href: '/brewmuse'
   },
   {
     title: 'CoffeePal',
-    icon: '🌍',
+    image: coffeePalLogo.src,
     description: 'Discover exceptional coffee and local roasters. Find your next favorite blend in your area.',
     href: '/coffeepal'
   }

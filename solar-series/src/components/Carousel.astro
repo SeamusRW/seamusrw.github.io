@@ -1,7 +1,8 @@
 ---
 interface Project {
   title: string;
-  icon: string;
+  image?: string;
+  icon?: string;
   description: string;
   href: string;
 }
@@ -19,7 +20,11 @@ const { projects } = Astro.props;
       {projects.map((project) => (
         <a href={project.href} class="carousel-slide">
           <div class="slide-content">
-            <div class="slide-icon">{project.icon}</div>
+            {project.image ? (
+              <img src={project.image} alt={project.title} class="slide-logo" />
+            ) : (
+              <div class="slide-icon">{project.icon}</div>
+            )}
             <h3>{project.title}</h3>
             <p>{project.description}</p>
             <span class="slide-cta">Explore →</span>
@@ -77,6 +82,13 @@ const { projects } = Astro.props;
   .slide-icon {
     font-size: 4rem;
     margin-bottom: 0.5rem;
+  }
+
+  .slide-logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+    object-fit: contain;
   }
 
   .carousel-slide h3 {
